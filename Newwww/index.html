@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Royal Wedding Reception Invitation — Anik &amp; Debaleena</title>
+  <meta name="description" content="You are cordially invited to celebrate the Wedding Reception of Anik &amp; Debaleena on Monday, 23rd November 2026.">
+  <meta name="keywords" content="Anik, Debaleena, Wedding Reception, Bengali Wedding, Invitation, Howrah">
+  
+  <!-- Prevent browser cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Open Graph / WhatsApp Preview Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Royal Wedding Reception Invitation — Anik &amp; Debaleena">
+  <meta property="og:description" content="Together with their families, Anik &amp; Debaleena invite you to celebrate their wedding reception on 23rd Nov 2026. Tap to open the royal invitation!">
+  <meta property="og:image" content="assets/couple_artwork.jpg">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+  <meta name="theme-color" content="#4A0404">
+
+  <!-- Google Fonts: Luxury Serif, Romantic Script & Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons for UI vectors -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=4.1">
+</head>
+<body class="loading-state">
+
+  <!-- Global Particle Canvas (Soft floating petals and gold sparkles behind content) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Cursor Glitter Canvas (Interactive sparkle trail on move & click burst) -->
+  <canvas id="glitter-canvas"></canvas>
+
+  <!-- ====================================================
+       SCENE 1: CINEMATIC OPENING (Prajapataye Blessing & Transition)
+       ==================================================== -->
+  <section id="scene-intro" class="scene active-scene" aria-label="Cinematic Opening">
+    <div class="intro-backdrop">
+      <div class="bokeh-layer"></div>
+      <div class="light-ray-layer"></div>
+    </div>
+    
+    <div class="intro-content">
+      <!-- Sacred Prajapati Dotted Gold Circle Emblem -->
+      <div class="prajapataye-emblem-wrap">
+        <svg class="blessing-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Dotted Outer Ring matching the reference screenshot -->
+          <circle cx="50" cy="50" r="46" stroke="#D4AF37" stroke-width="1.8" stroke-dasharray="3.5 3.5"/>
+          <circle cx="50" cy="50" r="41" stroke="#D4AF37" stroke-width="0.8" opacity="0.6"/>
+          
+          <!-- Auspicious Prajapati Sacred Wedding Motif -->
+          <path d="M50 18 L50 32" stroke="#FFE27A" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="50" cy="14" r="2.5" fill="#FFD700"/>
+          <!-- Sacred Tilak / Chandan Bindu -->
+          <path d="M44 26 C44 26 50 20 56 26" stroke="#E60026" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="50" cy="27" r="2" fill="#E60026"/>
+          
+          <!-- Sacred Floral / Shankha Curves -->
+          <path d="M50 34 C41 42 38 52 46 62 C50 67 54 62 52 56 C50 50 44 48 46 44 C48 40 54 44 54 50" stroke="#FFE79A" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <circle cx="43" cy="46" r="2.5" fill="#FFE27A"/>
+          <path d="M50 60 C50 68 47 74 44 80 C50 82 56 76 56 70 C56 64 50 60 50 60 Z" fill="url(#goldGrad)" opacity="0.95"/>
+          
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF3C4"/>
+              <stop offset="50%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#996515"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Auspicious Sacred Heading -->
+      <h1 class="sacred-shloka shimmer-text">
+        || SHREE SHREE PRAJAPATAYE NAMAH ||
+      </h1>
+
+      <p class="sacred-subtitle">
+        With the Divine Auspicious Blessings
+      </p>
+
+      <!-- Sacred Lotus with Horizontal Gold Divider Lines -->
+      <div class="divider-alpana-small">
+        <span class="divider-wing-line left"></span>
+        <span class="shankha-icon">🪷</span>
+        <span class="divider-wing-line right"></span>
+      </div>
+
+      <h2 class="reveal-text" id="intro-reveal-heading">
+        Something Beautiful Awaits...
+      </h2>
+
+      <div class="intro-diya-row">
+        <div class="pulsing-heart">✨ 💖 ✨</div>
+      </div>
+
+      <div class="intro-bottom-line"></div>
+
+      <div class="intro-loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SCENE 2: THE GIANT ROYAL ENVELOPE (Interactive 3D Envelope)
+       ==================================================== -->
+  <section id="scene-envelope" class="scene" aria-label="Royal Wedding Envelope">
+    <div class="envelope-ambient-bg">
+      <div class="curtain-vignette"></div>
+      <div class="sparkle-particles-layer"></div>
+    </div>
+
+    <div class="envelope-scene-wrapper">
+      <div class="scene-header-subtle">
+        <span class="alpana-badge">Royal Wedding Invitation</span>
+        <h2 class="envelope-scene-title">An Invitation Awaits You</h2>
+        <p class="envelope-instruction">Tap the wax seal or button to unfold the celebration</p>
+      </div>
+
+      <!-- 3D Realistic Royal Envelope Container -->
+      <div class="royal-envelope-container" id="envelope-container">
+        <div class="envelope-glow-aura"></div>
+
+        <!-- 3D Envelope Structure -->
+        <div class="envelope-3d" id="envelope-3d">
+          
+          <!-- Back Interior Lining of Envelope -->
+          <div class="envelope-back">
+            <div class="envelope-interior-pattern"></div>
+          </div>
+
+          <!-- The Invitation Card resting inside the envelope -->
+          <div class="envelope-inner-card" id="envelope-card">
+            <div class="card-inner-emboss">
+              <div class="card-gold-border">
+                <div class="mini-topor-emblem">👑 🪷 👑</div>
+                <p class="card-pretitle">WEDDING RECEPTION INVITATION</p>
+                <h3 class="card-names">Anik &amp; Debaleena</h3>
+                <div class="card-date-badge">DISCOVER THE SURPRISE INSIDE</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom & Side Flaps -->
+          <div class="envelope-pocket">
+            <div class="envelope-pocket-ornament">
+              <div class="alpana-gold-center"></div>
+            </div>
+          </div>
+
+          <!-- Top Foldable Flap with 3D Flip Mechanics -->
+          <div class="envelope-flap" id="envelope-flap">
+            <div class="flap-exterior">
+              <div class="flap-ornamental-border"></div>
+              <div class="flap-alpana-corner left"></div>
+              <div class="flap-alpana-corner right"></div>
+            </div>
+          </div>
+
+          <!-- Royal Wax Seal Centerpiece -->
+          <div class="wax-seal-wrapper" id="wax-seal" role="button" tabindex="0" title="Click to open envelope">
+            <div class="wax-seal-outer">
+              <div class="wax-seal-inner">
+                <span class="monogram-text">A <span class="seal-heart">♡</span> D</span>
+                <span class="seal-subtext">2026</span>
+              </div>
+            </div>
+            <div class="seal-crack-overlay"></div>
+            <div class="seal-sparkle-ring"></div>
+            <div class="tap-hint-pill">
+              <span>✨ Tap to Open</span>
+            </div>
+          </div>
+
+        </div> <!-- /envelope-3d -->
+
+      </div> <!-- /royal-envelope-container -->
+
+      <!-- Action Button -->
+      <div class="envelope-actions">
+        <button id="open-envelope-btn" class="royal-primary-btn" aria-label="Open the invitation">
+          <span class="btn-sparkle">✨</span>
+          <span class="btn-text">OPEN THE INVITATION</span>
+          <span class="btn-shine"></span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================
+       MAIN INVITATION PORTAL (Revealed after envelope opens)
+       ==================================================== -->
+  <main id="main-invitation" class="main-invitation-hidden">
+
+    <!-- Top Sticky Navigation & Quick Links -->
+    <header class="royal-navbar" id="royal-nav">
+      <div class="nav-brand">
+        <span class="nav-monogram">Anik &amp; Debaleena</span>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#scene-couple" class="nav-link">Couple</a>
+        <a href="#scene-scratch" class="nav-link">Reveal Date</a>
+        <a href="#scene-countdown" class="nav-link">Countdown</a>
+        <a href="#scene-card" class="nav-link">Invitation Card</a>
+        <a href="#scene-venue" class="nav-link">Venue Map</a>
+      </nav>
+      <div class="nav-action">
+        <button class="nav-btn" id="nav-directions-btn" onclick="openGoogleMaps()">
+          <i class="fa-solid fa-location-dot"></i> <span class="nav-btn-text">Venue Map</span>
+        </button>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars" id="nav-toggle-icon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================
+         1. COUPLE REVEAL (Bride & Groom Artwork & Names)
+         ==================================================== -->
+    <section id="scene-couple" class="experience-section couple-stage-section">
+      <div class="stage-backdrop-lighting">
+        <div class="stage-chandelier chandelier-left"></div>
+        <div class="stage-chandelier chandelier-right"></div>
+      </div>
+
+      <div class="container section-container">
+        
+        <div class="auspicious-heading-wrap" data-reveal="fade-up">
+          <span class="auspicious-symbol">“Shree Shree Prajapataye Namah”</span>
+          <p class="family-pretext">Together with their families</p>
+        </div>
+
+        <!-- Grand Couple Artwork Presentation (Big, Uncropped & Clean) -->
+        <div class="couple-stage-frame" data-reveal="zoom-in">
+          <div class="floral-arch-outer">
+            <div class="couple-image-container">
+              <img src="assets/couple_artwork.jpg?v=4.0" 
+                   alt="Anik and Debaleena" 
+                   class="couple-main-img" 
+                   id="couple-main-img"
+                   loading="eager">
+              <div class="couple-glow-backdrop"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Couple Names & Royal Title with Luxury Typography -->
+        <div class="couple-title-block" data-reveal="fade-up">
+          <h1 class="couple-names-headline">
+            <span class="groom-name">Anik</span>
+            <span class="ampersand-sign">&amp;</span>
+            <span class="bride-name">Debaleena</span>
+          </h1>
+
+          <div class="royal-ornament-divider">
+            <span class="ornament-line"></span>
+            <span class="ornament-center">🪷 ✦ 🪷</span>
+            <span class="ornament-line"></span>
+          </div>
+
+          <p class="invitation-lead-text">
+            Cordially invite you to celebrate their beautiful new journey of eternal love and togetherness.
+          </p>
+          
+          <!-- Pill matching the user's design -->
+          <div class="reception-tag-badge">
+            <span class="badge-star">✦</span>
+            <span>WEDDING RECEPTION</span>
+            <span class="badge-star">✦</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         2. MYSTERY SCRATCH CARD (Scratching reveals ONLY Date and Time!)
+         ==================================================== -->
+    <section id="scene-scratch" class="experience-section scratch-section">
+      <div class="container section-container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <span class="gold-badge">INTERACTIVE REVEAL</span>
+          <h2 class="section-main-title">✨ Scratch To Reveal The Date ✨</h2>
+          <p class="section-subtitle">Scratch below with your finger to unlock the celebration date!</p>
+        </div>
+
+        <!-- The Scratch Card Physical Frame -->
+        <div class="scratch-card-wrapper" id="scratch-card-wrapper" data-reveal="zoom-in">
+          <div class="scratch-card-frame">
+            
+            <!-- Underneath Revealed DATE & TIME ONLY -->
+            <div class="scratch-hidden-content" id="scratch-hidden-content">
+              
+              <div class="hidden-date-celebration-canvas">
+                <div class="celebration-vignette"></div>
+                <div class="shimmer-disco-lights"></div>
+                <div class="golden-fireworks-bg"></div>
+
+                <!-- Grand Revealed Date & Time -->
+                <div class="revealed-date-stage">
+                  <div class="revealed-top-pill">🎉 SAVE THE DATE 🎉</div>
+                  <h3 class="revealed-main-headline">MONDAY, 23RD NOVEMBER 2026</h3>
+                  
+                  <div class="revealed-time-badge">
+                    <span class="time-clock-icon">⏰</span>
+                    <span class="time-main-text">6:00 PM ONWARDS</span>
+                  </div>
+
+                  <p class="revealed-invitation-quote">
+                    "Come celebrate love, laughter and a beautiful new beginning with Anik &amp; Debaleena!"
+                  </p>
+                </div>
+              </div>
+
+            </div> <!-- /scratch-hidden-content -->
+
+            <!-- Real HTML5 Canvas Foil Coating (Metallic Champagne / Gold) -->
+            <canvas id="scratch-canvas" width="640" height="420"></canvas>
+
+            <!-- Scratch Progress Bar & Indicator -->
+            <div class="scratch-helper-hint" id="scratch-hint">
+              <span class="finger-icon">👆</span>
+              <span class="hint-text">Scratch to reveal date!</span>
+            </div>
+
+            <!-- Scratch Progress Tracker -->
+            <div class="scratch-progress-indicator" id="scratch-progress-wrap">
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" id="scratch-progress-bar" style="width: 0%;"></div>
+              </div>
+              <span class="progress-text" id="scratch-progress-text">Scratched: 0%</span>
+            </div>
+
+          </div> <!-- /scratch-card-frame -->
+
+          <!-- Quick Reveal Button -->
+          <div class="scratch-manual-trigger">
+            <button id="instant-reveal-btn" class="subtle-link-btn">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Tap for Instant Date Reveal
+            </button>
+          </div>
+
+          <!-- Locked Countdown Teaser Placeholder (Unlocked once scratched) -->
+          <div class="scratch-unlock-teaser" id="scratch-unlock-teaser">
+            <div class="teaser-lock-badge">
+              <span class="teaser-icon">⏳</span>
+              <span class="teaser-text">Scratch the card above with your finger to reveal the celebration date &amp; unlock the live countdown!</span>
+            </div>
+          </div>
+
+        </div> <!-- /scratch-card-wrapper -->
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         3. LIVE WEDDING COUNTDOWN (Appears gradually after scratch card)
+         ==================================================== -->
+    <section id="scene-countdown" class="experience-section countdown-section countdown-locked-state">
+      <div class="container section-container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <span class="gold-badge">TIME REMAINING</span>
+          <h2 class="section-main-title">The Celebration Begins In</h2>
+          <p class="section-subtitle">Counting down every joyful heartbeat to the grand celebration</p>
+        </div>
+
+        <!-- 4 Animated Glass-Gold Counter Cards -->
+        <div class="countdown-grid" id="countdown-grid" data-reveal="zoom-in">
+          <div class="countdown-card">
+            <div class="card-inner">
+              <div class="counter-number-wrap">
+                <span class="count-value" id="days-count">00</span>
+              </div>
+              <span class="count-label">DAYS</span>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <div class="countdown-card">
+            <div class="card-inner">
+              <div class="counter-number-wrap">
+                <span class="count-value" id="hours-count">00</span>
+              </div>
+              <span class="count-label">HOURS</span>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <div class="countdown-card">
+            <div class="card-inner">
+              <div class="counter-number-wrap">
+                <span class="count-value" id="minutes-count">00</span>
+              </div>
+              <span class="count-label">MINUTES</span>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <div class="countdown-card">
+            <div class="card-inner">
+              <div class="counter-number-wrap">
+                <span class="count-value" id="seconds-count">00</span>
+              </div>
+              <span class="count-label">SECONDS</span>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+        </div>
+
+        <div class="calendar-actions" data-reveal="fade-up">
+          <button class="calendar-btn" id="add-google-cal-btn" onclick="addToGoogleCalendar()">
+            <i class="fa-brands fa-google"></i> Add to Google Calendar
+          </button>
+          <button class="calendar-btn ics-btn" id="download-ics-btn" onclick="downloadIcsFile()">
+            <i class="fa-regular fa-calendar-check"></i> Save Apple/Outlook (.ics)
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         4. THE ORIGINAL FORMAL WEDDING CARD (Luxury Bengali Royal Stationery)
+         ==================================================== -->
+    <section id="scene-card" class="experience-section royal-card-section">
+      <div class="container note-container">
+        
+        <div class="royal-scroll-card" data-reveal="fade-up">
+          <!-- Ornamental Corner Flourishes -->
+          <div class="alpana-corner top-left"></div>
+          <div class="alpana-corner top-right"></div>
+          <div class="alpana-corner bottom-left"></div>
+          <div class="alpana-corner bottom-right"></div>
+
+          <div class="scroll-card-inner">
+            
+            <!-- Top Blessing Header -->
+            <div class="prajapataye-card-header">
+              <h2 class="card-blessing-heading">“Shree Shree Prajapataye Namah”</h2>
+              <div class="card-header-line"></div>
+            </div>
+
+            <div class="invitation-letter-body">
+              <p class="parents-invitation-line">
+                <strong>Mr. Swapan Kumar Panja &amp; Mrs. Kajal Panja</strong>
+              </p>
+              
+              <p class="request-pleasure-line">
+                Cordially request the pleasure of your gracious Presence &amp; blessings on the auspicious occasion of the
+              </p>
+
+              <div class="card-occasion-badge">
+                <span class="occasion-text">Wedding Reception</span>
+              </div>
+
+              <p class="relation-lead-line">
+                of their only beloved son
+              </p>
+
+              <!-- Featured Couple Names -->
+              <div class="featured-card-couple">
+                <span class="card-couple-name name-anik">Anik</span>
+                <span class="card-couple-ampersand">&amp;</span>
+                <span class="card-couple-name name-debaleena">Debaleena</span>
+              </div>
+
+              <p class="relation-daughter-line">
+                Only daughter of
+              </p>
+              <p class="bride-parents-names">
+                <strong>Mr. Durgadas Mitra &amp; Mrs. Sadhana Mitra</strong>
+              </p>
+
+              <div class="card-date-highlight-bar">
+                <span class="date-event-text">On <strong>23rd November 2026</strong>, Monday, evening <strong>6.00pm</strong></span>
+              </div>
+
+              <!-- Venue Details (First Venue Reveal on Page) -->
+              <div class="card-venue-container">
+                <div class="venue-tag-pill">: : Venue : :</div>
+                <h3 class="card-venue-title">Bandhani Bayam Samity</h3>
+                <p class="card-venue-street">13, Gadadher Mistery Lane, Howrah-711104</p>
+              </div>
+
+              <!-- Contact Numbers -->
+              <div class="card-contact-box">
+                <div class="contact-header-badge">
+                  <i class="fa-solid fa-phone-volume"></i> Mobile no.
+                </div>
+                <div class="contact-links-list">
+                  <a href="tel:7003724096" class="contact-number-link">7003724096</a>
+                  <span class="contact-slash">/</span>
+                  <a href="tel:9123019317" class="contact-number-link">9123019317</a>
+                </div>
+              </div>
+
+            </div> <!-- /invitation-letter-body -->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         5. LOCATION MAP & DIRECTIONS
+         ==================================================== -->
+    <section id="scene-venue" class="experience-section venue-map-section">
+      <div class="container section-container">
+        
+        <div class="section-title-wrap" data-reveal="fade-up">
+          <span class="gold-badge">LOCATION &amp; NAVIGATION</span>
+          <h2 class="section-main-title">Find Your Way To The Celebration</h2>
+          <p class="section-subtitle">Easy directions to Bandhani Bayam Samity, Shibpur</p>
+        </div>
+
+        <div class="venue-map-showcase" data-reveal="zoom-in">
+          
+          <!-- Venue Address Information Card -->
+          <div class="venue-info-card">
+            <div class="venue-badge-pill">
+              <i class="fa-solid fa-location-dot"></i> RECEPTION VENUE
+            </div>
+            <h3 class="venue-name-heading">Bandhani Bayam Samity</h3>
+            <div class="address-details-list">
+              <div class="addr-item">
+                <i class="fa-solid fa-map-pin"></i>
+                <div>
+                  <strong>Address:</strong>
+                  <p>13, Gadadher Mistery Lane, Shibpur</p>
+                </div>
+              </div>
+              <div class="addr-item">
+                <i class="fa-solid fa-city"></i>
+                <div>
+                  <strong>City:</strong>
+                  <p>Howrah, West Bengal – 711104</p>
+                </div>
+              </div>
+              <div class="addr-item">
+                <i class="fa-solid fa-car"></i>
+                <div>
+                  <strong>Landmark &amp; Accessibility:</strong>
+                  <p>Conveniently accessible via Nabanna / Mandirtala and Vidyasagar Setu (2nd Hooghly Bridge).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Glowing Google Maps CTA Button -->
+            <a href="https://maps.app.goo.gl/cSHd2HwhdN6tko2a7" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="map-launch-cta-btn"
+               id="google-maps-btn">
+              <span class="pin-bounce"><i class="fa-solid fa-location-arrow"></i></span>
+              <span class="cta-label">OPEN IN GOOGLE MAPS</span>
+              <span class="btn-external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+          </div>
+
+          <!-- Interactive Embedded Map Frame with Gold Corners -->
+          <div class="map-frame-wrapper">
+            <div class="map-gold-frame">
+              <div class="frame-corner c-tl"></div>
+              <div class="frame-corner c-tr"></div>
+              <div class="frame-corner c-bl"></div>
+              <div class="frame-corner c-br"></div>
+
+              <!-- Google Maps Embed for Shibpur / Howrah -->
+              <div class="map-viewport">
+                <iframe 
+                  id="google-map-iframe"
+                  title="Venue Location Map - Bandhani Bayam Samity"
+                  src="https://maps.google.com/maps?q=Bandhani%20Bayam%20Samiti%2C%2012%2C%20Gadadhar%20Mistry%20Lane%2C%20Shibpur%2C%20Howrah%20711104&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <div class="map-pin-overlay">
+                  <div class="pulsing-map-pin">
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         6. FINAL EMOTIONAL SCREEN & WISHES (No Get Directions / Save Date in footer)
+         ==================================================== -->
+    <section id="scene-final" class="experience-section final-emotional-section">
+      <div class="final-curtain-glow"></div>
+
+      <div class="container section-container">
+        
+        <div class="final-couple-showcase" data-reveal="zoom-in">
+          <div class="final-floral-wreath">
+            <div class="couple-round-avatar">
+              <img src="assets/couple_artwork.jpg?v=4.0" alt="Anik &amp; Debaleena" class="final-avatar-img">
+            </div>
+            <div class="wreath-glow"></div>
+          </div>
+        </div>
+
+        <div class="final-message-block" data-reveal="fade-up">
+          <h2 class="emotional-lead-heading">
+            "Your Presence<br>Will Make Our Celebration Complete."
+          </h2>
+
+          <div class="signature-block">
+            <p class="with-love-tag">With Love &amp; Respect,</p>
+            <h3 class="final-names-calligraphy">Anik &amp; Debaleena</h3>
+          </div>
+
+          <div class="no-gifts-badge">
+            <span class="blessing-sparkle">🪷</span>
+            <span class="badge-text">Only Blessings, No Gifts Please</span>
+            <span class="blessing-sparkle">🪷</span>
+          </div>
+
+        </div>
+
+        <!-- Royal Footer in English -->
+        <footer class="royal-page-footer">
+          <div class="footer-divider-alpana"></div>
+          <p class="footer-blessing-text">Wishing a Lifetime of Eternal Love, Peace &amp; Happiness</p>
+          <p class="footer-copyright">
+            Designed with love for the Wedding Reception of <strong>Anik &amp; Debaleena</strong> • Shibpur, Howrah
+          </p>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script Files -->
+  <script src="script.js?v=4.0"></script>
+</body>
+</html>
